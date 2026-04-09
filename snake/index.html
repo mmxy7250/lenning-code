@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="scoreboard">
+      <div class="score-item">
+        <span class="score-label">分数</span>
+        <span id="score" class="score-value">0</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">最高</span>
+        <span id="high-score" class="score-value">0</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">速度</span>
+        <span id="speed-level" class="score-value">1</span>
+      </div>
+    </header>
+
+    <div id="canvas-wrap">
+      <canvas id="game" width="400" height="400"></canvas>
+      <div id="overlay">
+        <div id="overlay-content">
+          <p id="overlay-title">贪吃蛇</p>
+          <p id="overlay-msg">按 空格键 或点击按钮开始</p>
+          <button id="start-btn">开始游戏</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="controls">
+      <div class="dpad-row">
+        <button class="dpad-btn" data-dir="up">&#9650;</button>
+      </div>
+      <div class="dpad-row">
+        <button class="dpad-btn" data-dir="left">&#9664;</button>
+        <button class="dpad-btn" data-dir="down">&#9660;</button>
+        <button class="dpad-btn" data-dir="right">&#9654;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
